@@ -1,0 +1,58 @@
+.root {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: black;
+  color: #fff;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.logo:hover {
+  background-color: #4361ee;
+}
+
+.buttons button {
+  margin-left: 10px;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-contained {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+}
+
+.error {
+  background-color: red;
+  color: white;
+}
