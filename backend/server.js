@@ -58,19 +58,22 @@ app.post('/upload' , chectAuth , upload.single('image'), (req , res)=>{
     })
 })
 
+app.get("/tags" , PostC.getLastTags)
+
 
 app.get("/auth/me", chectAuth, UserControler.getMe , loginValidator);
 
-app.get("/post" , PostC.getAll );
+app.get("/posts" , PostC.getAll );
+app.get("/posts/tags", PostC.getLastTags)
 
-app.get("/post/:id", PostC.getOne );
+app.get("/posts/:id", PostC.getOne );
 
-app.post("/post", chectAuth , postCreateValidation,  handleErrors ,PostC.create );
+app.post("/posts", chectAuth ,  handleErrors ,PostC.create );
 
 app.delete("/post/:id", chectAuth, PostC.remove);
 
 
-app.patch("/post/:id",chectAuth ,postCreateValidation,   PostC.update );
+app.patch("/posts/:id",chectAuth ,postCreateValidation,   PostC.update );
 
 
 
