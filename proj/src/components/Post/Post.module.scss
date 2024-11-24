@@ -1,24 +1,31 @@
 $blue: #4361ee;
+// Змінна для зберігання основного синього кольору, який використовується в стилях для hover-ефектів.
 
 .root {
-  background-color: #fff;
-  border: 1px solid #dedede;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 15px;
-  position: relative;
+  // Основний контейнер поста.
+  background-color: #fff; // Білий фон.
+  border: 1px solid #dedede; // Сірий контур.
+  border-radius: 6px; // Закруглені кути.
+  overflow: hidden; // Обрізає контент, який виходить за межі контейнера.
+  margin-bottom: 15px; // Відступ між постами.
+  position: relative; // Забезпечує позиціонування для дочірніх елементів, таких як кнопки редагування.
 
   &:hover {
-    border: 1px solid $blue;
-    box-shadow: 0 0 0 1px $blue;
+    // Стилі при наведенні миші.
+    border: 1px solid $blue; // Зміна кольору контуру на синій.
+    box-shadow: 0 0 0 1px $blue; // Додається легкий синій тіньовий ефект.
 
     .editButtons {
-      opacity: 1;
+      // Показує кнопки редагування при наведенні на пост.
+      opacity: 1; // Змінює прозорість на повну.
     }
   }
 
   &Full {
+
+    // Модифікатор для повноекранного вигляду поста.
     &:hover {
+      // Відключає hover-ефекти в повноекранному режимі.
       background-color: #fff;
       border: 1px solid #dedede;
       box-shadow: none;
@@ -27,132 +34,150 @@ $blue: #4361ee;
 }
 
 .image {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  // Секція зображення поста.
+  width: 100%; // Зображення займає всю ширину контейнера.
+  height: 300px; // Фіксована висота.
+  object-fit: cover; // Забезпечує обрізання і масштабування зображення без спотворення.
 
   &Full {
+    // Стилі для зображення в повноекранному режимі.
     min-height: 300px;
-    height: 100%;
+    height: 100%; // Зображення займає всю доступну висоту.
   }
 }
 
 .wrapper {
-  padding: 10px 20px 20px;
+  // Контейнер для внутрішнього контенту поста.
+  padding: 10px 20px 20px; // Внутрішні відступи.
 }
 
 .content {
-  margin: 30px 0 50px;
+  // Секція текстового контенту поста.
+  margin: 30px 0 50px; // Відступи навколо тексту.
 
   p {
-    font-size: 22px;
-    line-height: 36px;
+    // Параграфи тексту.
+    font-size: 22px; // Розмір шрифту.
+    line-height: 36px; // Висота рядка.
   }
 }
 
 .indention {
-  padding-left: 40px;
+  padding-left: 40px; // Відступ тексту зліва.
 }
 
 .title {
-  font-size: 28px;
-  margin: 0;
+  // Заголовок поста.
+  font-size: 28px; // Розмір шрифту.
+  margin: 0; // Заборона зовнішніх відступів.
 
   a {
-    text-decoration: none;
-    color: #000;
+    // Стилі для посилання заголовка.
+    text-decoration: none; // Видалення підкреслення.
+    color: #000; // Чорний текст.
 
     &:hover {
-      color: $blue;
+      // Стиль при наведенні.
+      color: $blue; // Зміна кольору тексту на синій.
     }
   }
 
   &Full {
+    // Стилі для заголовка у повноекранному режимі.
     font-size: 42px;
-    font-weight: 900;
+    font-weight: 900; // Потовщення тексту.
   }
 }
 
 .tags {
-  list-style: none;
-  padding: 0;
-  margin: 5px 0 0 0;
+  // Секція з тегами поста.
+  list-style: none; // Видалення стандартних стилів списку.
+  padding: 0; // Видалення відступів.
+  margin: 5px 0 0 0; // Відступ зверху.
 
   li {
-    display: inline-block;
-    font-size: 14px;
-    margin-right: 15px;
-    opacity: 0.5;
+    // Кожен тег.
+    display: inline-block; // Розташування тегів в один рядок.
+    font-size: 14px; // Розмір шрифту.
+    margin-right: 15px; // Відступ між тегами.
+    opacity: 0.5; // Прозорість.
 
     &:hover {
-      opacity: 1;
+      // Стиль при наведенні.
+      opacity: 1; // Зміна прозорості на повну.
     }
 
     a {
-      text-decoration: none;
-      color: #000;
+      // Посилання на теги.
+      text-decoration: none; // Видалення підкреслення.
+      color: #000; // Чорний текст.
     }
   }
 }
 
 .postDetails {
-  list-style: none;
+  // Секція з деталями поста (наприклад, автор, дата).
+  list-style: none; // Видалення стандартних стилів списку.
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0 0; // Відступ зверху.
 
   li {
-    display: inline-flex;
-    align-items: center;
-    font-size: 14px;
-    margin-right: 20px;
-    opacity: 0.5;
+    // Кожна деталь.
+    display: inline-flex; // Вирівнювання деталей в один рядок.
+    align-items: center; // Вирівнювання елементів по вертикалі.
+    font-size: 14px; // Розмір шрифту.
+    margin-right: 20px; // Відступ між деталями.
+    opacity: 0.5; // Прозорість.
 
     svg {
-      font-size: 18px;
-      margin-right: 5px;
+      // Іконки в деталях.
+      font-size: 18px; // Розмір іконки.
+      margin-right: 5px; // Відступ від тексту.
     }
   }
 }
 
 .skeleton {
-  background-color: #fff;
-  border: 1px solid #dedede;
-  border-radius: 6px;
-  overflow: hidden;
-  margin-bottom: 15px;
+  // Скелетон (завантажувальний плейсхолдер) для поста.
+  background-color: #fff; // Білий фон.
+  border: 1px solid #dedede; // Сірий контур.
+  border-radius: 6px; // Закруглені кути.
+  overflow: hidden; // Обрізання контенту, що виходить за межі.
+  margin-bottom: 15px; // Відступ знизу.
 
   &Content {
-    padding: 20px;
+    padding: 20px; // Внутрішні відступи.
   }
 
   &Info {
-    margin-left: 50px;
+    margin-left: 50px; // Відступ для інформації.
   }
 }
 
 .skeletonUser {
-  display: flex;
+  display: flex; // Розташування елементів в один рядок.
 
   &Details {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; // Вертикальне вирівнювання елементів.
   }
 }
 
 .skeletonTags {
-  display: flex;
+  display: flex; // Розташування тегів в рядок.
 
   span {
-    margin-right: 15px;
+    margin-right: 15px; // Відступ між тегами.
   }
 }
 
 .editButtons {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 10px;
-  opacity: 0;
-  transition: all 0.15s ease-in-out;
+  // Кнопки редагування поста.
+  position: absolute; // Абсолютне позиціонування.
+  right: 15px; // Відступ праворуч.
+  top: 15px; // Відступ зверху.
+  background-color: rgba(255, 255, 255, 1); // Білий фон.
+  border-radius: 10px; // Закруглені кути.
+  opacity: 0; // Спочатку приховані.
+  transition: all 0.15s ease-in-out; // Плавна анімація появи.
 }

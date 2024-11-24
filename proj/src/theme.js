@@ -1,16 +1,21 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles"; // Імпортуємо функцію createTheme для створення кастомної теми Material UI
 
+// Створення кастомної теми для Material UI
 export const theme = createTheme({
-  shadows: ["none"],
+  shadows: ["none"], // Вимикаємо тіні для всіх компонентів (якщо хочете використовувати інші тіні, можна змінити масив)
+
+  // Налаштування палітри кольорів
   palette: {
     primary: {
-      main: "#4361ee",
+      main: "#4361ee", // Встановлюємо основний колір для primary кольору
     },
   },
+
+  // Налаштування типографіки
   typography: {
     button: {
-      textTransform: "none",
-      fontWeight: 400,
+      textTransform: "none", // Вимикаємо автоматичну трансформацію тексту для кнопок (не робимо літери великими за замовчуванням)
+      fontWeight: 400, // Встановлюємо вагу шрифта для кнопок
     },
   },
 });

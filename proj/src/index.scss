@@ -1,7 +1,18 @@
+// Встановлюємо нульовий відступ для тіла сторінки
 body {
-  margin: 0;
+  margin: 0; // Видаляємо стандартний відступ у браузера
+
+  // Встановлюємо шрифт для всіх елементів на сторінці
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #F5F5F5 !important;
+  // Ці шрифти використовуються для кращої сумісності на різних пристроях:
+  // - 'Roboto' — стандартний шрифт для матеріальних додатків.
+  // - 'BlinkMacSystemFont' — шрифт для MacOS (для Chrome та Safari).
+  // - '-apple-system' — системний шрифт для iOS, macOS та Safari.
+
+  // Включаємо гладке згладжування шрифтів для кращої читабельності
+  -webkit-font-smoothing: antialiased; // Для Webkit-браузерів (Chrome, Safari)
+  -moz-osx-font-smoothing: grayscale; // Для Firefox на MacOS
+
+  // Встановлюємо фоновий колір для сторінки
+  background-color: #F5F5F5 !important; // Світло-сірий фон (слабка сірість, майже білий), додаємо !important для переважання інших правил
 }
