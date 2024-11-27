@@ -9,8 +9,10 @@ import { TagsBlock } from '../components/TagsBlock';
 import { CommentsBlock } from '../components/CommentsBlock';
 import { fetchPosts, fetchTags } from '../redux/slices/post';
 
+
 export const Home = () => {
   const dispath = useDispatch()
+  const userData = useSelector(state => state.auth.data)
   const {posts , tags} = useSelector(state => state.posts)
     const isPostLoading = posts.status === 'load'
     const isTagsLoading = tags.status === 'load'
@@ -44,13 +46,14 @@ console.log(posts)
             <Post
               id={obj._id}
               title={obj.title}
-              imageUrl={obj.imageUrl}
+              imageUrl={obj.imageUrl ? `http://localhost:4444${obj.imageUrl}`: ''} 
               user={obj.user}
               createdAt={obj.createdAt}
               viewsCount={obj.viewsCount}
               commentsCount={3}
               tags={obj.tags}
               isEditable
+              
               
             />
           ))}

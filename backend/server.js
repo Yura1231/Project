@@ -70,7 +70,7 @@ app.get("/posts/:id", PostC.getOne );
 
 app.post("/posts", chectAuth ,  handleErrors ,PostC.create );
 
-app.delete("/post/:id", chectAuth, PostC.remove);
+app.delete("/posts/:id",  PostC.remove);
 
 
 app.patch("/posts/:id",chectAuth ,postCreateValidation,   PostC.update );

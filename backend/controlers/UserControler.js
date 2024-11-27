@@ -71,7 +71,7 @@ export const login =async (req, res) => {
         const { passwordHash, ...userData } = user._doc;
 
         res.json({
-            
+            _id: user._doc,
             token
         });
     } catch (err) {
